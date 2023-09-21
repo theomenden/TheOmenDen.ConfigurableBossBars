@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "configurablebossbars",
+  "version": "${version}",
+  "name": "Configurable Boss Bars",
+  "description": "",
+  "authors": [
+    "Andy Beers (Alu)"
+  ],
+  "contact": {
+    "repo": "https://github.com/theomenden/TheOmenDen.ConfigurableBossBars"
+  },
+  "license": "LGPL-3.0",
+  "icon": "assets/configurablebossbars/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.theomenden.configurablebossbars.client.ConfigurableBossBarsClient"
+    ],
+    "modmenu": [
+      "com.theomenden.configurablebossbars.client.ConfigurableBossBarsModMenu"
+    ]
+  },
+  "mixins": [
+    "configurablebossbars.mixins.json"
+  ],
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/GWshtCqEx4"
+      },
+      "update_checker": true
+    }
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}",
+    "cloth-config": ">=11.1.106",
+    "java": ">=17"
+  }
+}
