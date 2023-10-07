@@ -3,7 +3,7 @@
   "id": "configurablebossbars",
   "version": "${version}",
   "name": "Configurable Boss Bars",
-  "description": "",
+  "description": "A simple mod allowing you to toggle boss bars, and stack for boss types",
   "authors": [
     "Andy Beers (Alu)"
   ],
