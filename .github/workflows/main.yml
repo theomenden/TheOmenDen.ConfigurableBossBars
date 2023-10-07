@@ -29,6 +29,5 @@ jobs:
           modrinth-featured: true
           curseforge-id: 915450
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
-          github-tag: mc1.20.1-0.1.1
           github-generate-changelog: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
