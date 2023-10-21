@@ -6,7 +6,7 @@ plugins {
     id 'com.modrinth.minotaur' version '2.+'
     id 'io.freefair.lombok' version '8.4'
     id "com.github.johnrengelman.shadow" version '8.1.1'
-    id "dev.poolside.gradle.semantic-version" version "0.2.0"
+    id "dev.poolside.gradle.semantic-version" version '0.2.0'
 }
 
 version = project.mod_version
