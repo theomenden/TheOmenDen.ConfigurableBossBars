@@ -51,13 +51,14 @@ dependencies {
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.2';
 }
 
+def projectVersion = project.version.toString();
 
 processResources {
-    inputs.property "version", project.version
+    inputs.property "version", projectVersion
     inputs.property "minecraft_version", project.minecraft_version
     inputs.property "loader_version", project.loader_version
     filesMatching("fabric.mod.json") {
-        expand "version": project.version,
+        expand "version": projectVersion,
                 "minecraft_version": project.minecraft_version,
                 "loader_version": project.loader_version
     }
