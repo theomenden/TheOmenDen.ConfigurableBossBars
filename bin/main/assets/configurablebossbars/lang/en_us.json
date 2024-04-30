@@ -1,0 +1,12 @@
+{
+  "text.autoconfig.configurablebossbars.category.title": "Configurable Boss Bars",
+  "text.autoconfig.configurablebossbars.option.shouldDisableBars": "Disable Boss Bars",
+  "text.autoconfig.configurablebossbars.option.bossBarColor": "Change Boss Bar color",
+  "text.autoconfig.configurablebossbars.option.bossTextColor": "Change Boss Text color",
+  "text.autoconfig.configurablebossbars.option.shouldDisableBars.@Tooltip": "Disables ALL Boss Bars",
+  "text.autoconfig.configurablebossbars.option.bossBarColor.@Tooltip": "Cahnges the default boss bar color",
+  "text.autoconfig.configurablebossbars.option.bossTextColor.@Tooltip": "Changes the default boss text color",
+  "text.autoconfig.configurablebossbars.title": "Configurable Boss Bars",
+  "key.cbb.launcher": "Bind Bar Toggle",
+  "category.cbb": "Configurable Boss Bars"
+}

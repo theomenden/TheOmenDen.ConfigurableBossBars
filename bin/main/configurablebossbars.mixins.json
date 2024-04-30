@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.theomenden.configurablebossbars.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "LerpingBossEventMixin"
+  ],
+  "client": [
+    "BossHealthOverlayMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
