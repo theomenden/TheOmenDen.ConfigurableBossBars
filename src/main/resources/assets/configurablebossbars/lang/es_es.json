@@ -1,0 +1,12 @@
+{
+  "text.autoconfig.configurablebossbars.category.title": "Barras de jefe configurables",
+  "text.autoconfig.configurablebossbars.option.shouldDisableBars": "Deshabilitar barras de jefe",
+  "text.autoconfig.configurablebossbars.option.bossBarColor": "Cambiar color de la barra de jefe",
+  "text.autoconfig.configurablebossbars.option.bossTextColor": "Cambiar color del texto del jefe",
+  "text.autoconfig.configurablebossbars.option.shouldDisableBars.@Tooltip": "Deshabilita TODAS las barras de jefe",
+  "text.autoconfig.configurablebossbars.option.bossBarColor.@Tooltip": "Cambia el color de la barra de jefe predeterminado",
+  "text.autoconfig.configurablebossbars.option.bossTextColor.@Tooltip": "Cambia el color del texto del jefe predeterminado",
+  "text.autoconfig.configurablebossbars.title": "Barras de jefe configurables",
+  "key.cbb.launcher": "Lanzamiento de alternancia de la barra",
+  "category.cbb": "Barras de jefe configurables"
+}

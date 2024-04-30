@@ -1,0 +1,12 @@
+{
+  "text.autoconfig.configurablebossbars.category.title": "可配置的首领栏",
+  "text.autoconfig.configurablebossbars.option.shouldDisableBars": "禁用首领栏",
+  "text.autoconfig.configurablebossbars.option.bossBarColor": "更改首领栏颜色",
+  "text.autoconfig.configurablebossbars.option.bossTextColor": "更改首领文本颜色",
+  "text.autoconfig.configurablebossbars.option.shouldDisableBars.@Tooltip": "禁用所有首领栏",
+  "text.autoconfig.configurablebossbars.option.bossBarColor.@Tooltip": "更改默认首领栏颜色",
+  "text.autoconfig.configurablebossbars.option.bossTextColor.@Tooltip": "更改默认首领文本颜色",
+  "text.autoconfig.configurablebossbars.title": "可配置的首领栏",
+  "key.cbb.launcher": "绑定栏切换",
+  "category.cbb": "可配置的首领栏"
+}

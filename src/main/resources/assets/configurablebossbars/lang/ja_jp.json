@@ -1,0 +1,12 @@
+{
+  "text.autoconfig.configurablebossbars.category.title": "設定可能なボスバー",
+  "text.autoconfig.configurablebossbars.option.shouldDisableBars": "ボスバーを無効にする",
+  "text.autoconfig.configurablebossbars.option.bossBarColor": "ボスバーの色を変更する",
+  "text.autoconfig.configurablebossbars.option.bossTextColor": "ボステキストの色を変更する",
+  "text.autoconfig.configurablebossbars.option.shouldDisableBars.@Tooltip": "すべてのボスバーを無効にします",
+  "text.autoconfig.configurablebossbars.option.bossBarColor.@Tooltip": "デフォルトのボスバーの色を変更します",
+  "text.autoconfig.configurablebossbars.option.bossTextColor.@Tooltip": "デフォルトのボステキストの色を変更します",
+  "text.autoconfig.configurablebossbars.title": "設定可能なボスバー",
+  "key.cbb.launcher": "バー切り替えをバインド",
+  "category.cbb": "設定可能なボスバー"
+}

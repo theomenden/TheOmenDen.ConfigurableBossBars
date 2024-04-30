@@ -1,0 +1,12 @@
+{
+  "text.autoconfig.configurablebossbars.category.title": "Konfigurierbare Boss-Leisten",
+  "text.autoconfig.configurablebossbars.option.shouldDisableBars": "Boss-Leisten deaktivieren",
+  "text.autoconfig.configurablebossbars.option.bossBarColor": "Ändere die Farbe der Boss-Leiste",
+  "text.autoconfig.configurablebossbars.option.bossTextColor": "Ändere die Textfarbe des Bosses",
+  "text.autoconfig.configurablebossbars.option.shouldDisableBars.@Tooltip": "Deaktiviert ALLE Boss-Leisten",
+  "text.autoconfig.configurablebossbars.option.bossBarColor.@Tooltip": "Ändert die Standardfarbe der Boss-Leiste",
+  "text.autoconfig.configurablebossbars.option.bossTextColor.@Tooltip": "Ändert die Standardtextfarbe des Bosses",
+  "text.autoconfig.configurablebossbars.title": "Konfigurierbare Boss-Leisten",
+  "key.cbb.launcher": "Leisten-Umschalter binden",
+  "category.cbb": "Konfigurierbare Boss-Leisten"
+}

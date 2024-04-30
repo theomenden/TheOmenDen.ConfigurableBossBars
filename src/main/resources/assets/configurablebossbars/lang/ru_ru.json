@@ -1,0 +1,12 @@
+{
+  "text.autoconfig.configurablebossbars.category.title": "Настроить панели босса",
+  "text.autoconfig.configurablebossbars.option.shouldDisableBars": "Отключить панели босса",
+  "text.autoconfig.configurablebossbars.option.bossBarColor": "Изменить цвет панели босса",
+  "text.autoconfig.configurablebossbars.option.bossTextColor": "Изменить цвет текста босса",
+  "text.autoconfig.configurablebossbars.option.shouldDisableBars.@Tooltip": "Отключает ВСЕ панели босса",
+  "text.autoconfig.configurablebossbars.option.bossBarColor.@Tooltip": "Изменяет цвет панели босса по умолчанию",
+  "text.autoconfig.configurablebossbars.option.bossTextColor.@Tooltip": "Изменяет цвет текста босса по умолчанию",
+  "text.autoconfig.configurablebossbars.title": "Настроить панели босса",
+  "key.cbb.launcher": "Назначить переключатель панели",
+  "category.cbb": "Настроить панели босса"
+}

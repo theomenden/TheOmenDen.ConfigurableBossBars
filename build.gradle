@@ -1,12 +1,11 @@
 plugins {
-    id 'java-library'
     id 'maven-publish'
     id 'fabric-loom' version '1.6.+'
     id 'idea'
     id 'com.modrinth.minotaur' version '2.+'
     id 'io.freefair.lombok' version '8.+'
     id "com.github.johnrengelman.shadow" version '8.1.+'
-    id "nebula.release" version "19.0.+"
+    id "nebula.release" version '19.0.6'
 }
 
 repositories {
@@ -48,19 +47,23 @@ dependencies {
     modApi ("com.terraformersmc:modmenu:${project.modmenu_version}") {
         exclude(group: 'net.fabricmc.fabric.fabric-api')
     }
-    implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.2';
+
+    implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.2'
 }
 
-def projectVersion = project.version.toString();
+def fabricModTargets = ["fabric.mod.json"];
+def projectVersion = "${project.version}"
+def replaceProperties = [
+        version: projectVersion,
+        minecraft_version: project.minecraft_version,
+        loader_version: project.loader_version
+];
 
 processResources {
-    inputs.property "version", projectVersion
-    inputs.property "minecraft_version", project.minecraft_version
-    inputs.property "loader_version", project.loader_version
-    filesMatching("fabric.mod.json") {
-        expand "version": projectVersion,
-                "minecraft_version": project.minecraft_version,
-                "loader_version": project.loader_version
+    inputs.properties replaceProperties
+    replaceProperties.put 'project', project
+    filesMatching(fabricModTargets) {
+        expand replaceProperties
     }
 }
 

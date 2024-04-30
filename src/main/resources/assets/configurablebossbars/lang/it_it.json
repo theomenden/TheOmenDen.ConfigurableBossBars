@@ -1,0 +1,12 @@
+{
+  "text.autoconfig.configurablebossbars.category.title": "Barre del capo configurabili",
+  "text.autoconfig.configurablebossbars.option.shouldDisableBars": "Disabilita le barre del capo",
+  "text.autoconfig.configurablebossbars.option.bossBarColor": "Cambia il colore della barra del capo",
+  "text.autoconfig.configurablebossbars.option.bossTextColor": "Cambia il colore del testo del capo",
+  "text.autoconfig.configurablebossbars.option.shouldDisableBars.@Tooltip": "Disabilita TUTTE le barre del capo",
+  "text.autoconfig.configurablebossbars.option.bossBarColor.@Tooltip": "Cambia il colore predefinito della barra del capo",
+  "text.autoconfig.configurablebossbars.option.bossTextColor.@Tooltip": "Cambia il colore predefinito del testo del capo",
+  "text.autoconfig.configurablebossbars.title": "Barre del capo configurabili",
+  "key.cbb.launcher": "Avvia commutazione barra",
+  "category.cbb": "Barre del capo configurabili"
+}
