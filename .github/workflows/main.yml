@@ -36,8 +36,6 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Check Environment Variables
-        run: env
       - name: Checkout Code
       - uses: actions/checkout@v4
       - name: Setup Java
