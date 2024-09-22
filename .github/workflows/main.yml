@@ -109,7 +109,6 @@ jobs:
       - name: 'MC Publish Github Release'
         uses: Kir-Antipov/mc-publish@v3.3.0
         with:
-
           name: "Complete ${{ENV.VERSION_TITLE}}"
           github-generate-changelog: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
