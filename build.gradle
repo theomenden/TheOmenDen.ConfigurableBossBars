@@ -1,112 +1,125 @@
 plugins {
-    id 'java-library'
-    id 'fabric-loom' version '1.7.+'
-    id 'idea'
-    id 'maven-publish'
-    id 'com.modrinth.minotaur' version '2.+'
-    id 'io.freefair.lombok' version '8.10'
-    id "com.github.johnrengelman.shadow" version '8.1.1'
-    id "dev.poolside.gradle.semantic-version" version "0.2.1"
+    id 'dev.architectury.loom' version '1.7.+' apply false
+    id 'architectury-plugin' version '3.4.+'
+    id 'com.github.johnrengelman.shadow' version '8.1.+' apply false
+    id "me.shedaniel.unified-publishing" version "0.1.+" apply false
+    id "com.github.breadmoirai.github-release" version "2.5.2"
+    id "maven-publish"
 }
 
-version = project.mod_version
-group = project.maven_group
+if (System.getenv("GITHUB_TOKEN") != null) {
+    githubRelease {
+        token(System.getenv("GITHUB_TOKEN"))
+        owner('TheOmenDen')
+        repo("configurablebossbars")
+        tagName("${project.version}")
+        releaseName("V${project.version}")
+        body(project.rootProject.file("CHANGELOG.md").text)
+        draft(false)
 
-repositories {
-    // Add repositories to retrieve artifacts from in here.
-    // You should only use this when depending on other mods because
-    // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-    // See https://docs.gradle.org/current/userguide/declaring_repositories.html
-    // for more information about repositories.
-    maven {
-        name = 'ParchmentMC'
-        url = 'https://maven.parchmentmc.org'
-    }
-    maven {	name "Modrinth"; url "https://api.modrinth.com/maven"
-        content { includeGroup "maven.modrinth"	}
-    }
-    maven {	name 'modmenu'; url 'https://maven.terraformersmc.com/releases'	}
-    maven {	name 'cloth';   url = 'https://maven.shedaniel.me'	}
-    maven { name 'jitpack'; url 'https://jitpack.io'}
-}
-
-dependencies {
-    // To change the versions see the gradle.properties file
-    minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings loom.layered() {
-        officialMojangMappings()
-        parchment("org.parchmentmc.data:parchment-1.21:${project.parchment_version}@zip")
-    }
-    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-
-    // Fabric API. This is technically optional, but you probably want it anyway.
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-
-    modApi ("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_version}") {
-        exclude(group: 'net.fabricmc.fabric.fabric-api')
-    }
-    modApi ("com.terraformersmc:modmenu:${project.modmenu_version}") {
-        exclude(group: 'net.fabricmc.fabric.fabric-api')
-    }
-    implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.2';
-}
-
-processResources {
-    inputs.property "version", project.version
-    inputs.property "minecraft_version", project.minecraft_version
-    inputs.property "loader_version", project.loader_version
-    filteringCharset "UTF-8"
-
-    filesMatching("fabric.mod.json") {
-        expand "version": project.version,
-                "minecraft_version": project.minecraft_version,
-                "loader_version": project.loader_version
+        if (project.branch != null) {
+            targetCommitish(project.branch)
+        }
     }
 }
 
-def targetJavaVersion = 17
-tasks.withType(JavaCompile).configureEach {
-    // ensure that the encoding is set to UTF-8, no matter what the system default is
-    // this fixes some edge cases with special characters not displaying correctly
-    // see http://yodaconditions.net/blog/fix-for-java-file-encoding-problems-with-gradle.html
-    // If Javadoc is generated, this must be specified in that task too.
-    it.options.encoding = "UTF-8"
-    if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
-        it.options.release = targetJavaVersion
-    }
+architectury {
+    minecraft = project.minecraft_version
 }
 
-java {
-    def javaVersion = JavaVersion.toVersion(targetJavaVersion)
-    if (JavaVersion.current() < javaVersion) {
-        toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
-    }
-    archivesBaseName = project.archives_base_name
-    // Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
-    // if it is present.
-    // If you remove this line, sources will not be generated.
-    withSourcesJar()
-}
+allprojects {
+    apply plugin: "java"
+    apply plugin: "architectury-plugin"
+    apply plugin: "maven-publish"
 
-jar {
-    from("LICENSE") {
-        rename { "${it}_${project.archivesBaseName}"}
-    }
-}
+    group = rootProject.group
+    version = rootProject.version
 
-// configure the maven publication
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
+    base {
+        archivesName = "configurablebossbars"
+    }
+
+    repositories {
+        mavenCentral()
+        // rest of repositories block...
+        maven {
+            name = "Jamalam's Maven"
+            url = "https://maven.jamalam.tech/releases"
+            content {
+                includeGroup "io.github.jamalam360"
+            }
+        }
+
+        maven {
+            name = "Modrinth"
+            url = "https://api.modrinth.com/maven"
+        }
+
+        maven {
+            name = "ParchmentMC"
+            url = "https://maven.parchmentmc.org"
+        }
+
+        maven {
+            name = "Jitpack"
+            url = "https://jitpack.io"
         }
     }
 
-    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-    repositories {
-        // Add repositories to publish to here.
-        // Notice: This block does NOT have the same function as the block in the top level.
-        // The repositories here will be used for publishing your artifact, not for
-        // retrieving dependencies.
+    tasks.withType(JavaCompile).configureEach {
+        options.encoding = "UTF-8"
+        options.release = 21
     }
+
+    tasks.register("prepareWorkspace") {}
+
+    java {
+        withSourcesJar()
+    }
+}
+
+subprojects {
+    apply plugin: "dev.architectury.loom"
+
+    loom {
+        silentMojangMappingsLicense()
+    }
+
+    jar {
+        manifest {
+            attributes([
+                    'Specification-Title' : mod_name,
+                    'Specification-Version': project.jar.archiveVersion,
+                    'Implementation-Title' : project.name,
+                    'Implementation-Version': project.jar.archiveVersion,
+                    'Built-On-Java': "${System.getProperty('java.vm.version')} (${System.getProperty('java.vm.vendor')})",
+                    'Built-On-Minecraft': minecraft_version,
+                    'JamLib-File-Name' : "configurablebossbars-${project.base.archivesName.get()}-${rootProject.version}.jar",
+            ])
+        }
+    }
+
+    dependencies {
+        minecraft "net.minecraft:minecraft:${rootProject.minecraft_version}"
+        mappings  loom.layered() {
+            officialMojangMappings()
+            parchment("org.parchmentmc.data:parchment-1.21:${libs.versions.parchment.get()}")
+        }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8"
+    options.release = 21
+}
+
+java {
+    withSourcesJar()
+}
+
+tasks.publish {
+    dependsOn("clean")
+    dependsOn(":githubRelease")
+    dependsOn("fabric:publishedUnified")
+    dependsOn("neoforge:publishUnified")
 }

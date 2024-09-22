@@ -1,6 +1,6 @@
-package com.theomenden.configurablebossbars.mixins;
+package org.theomenden.configurablebossbars.mixins;
 
-import com.theomenden.configurablebossbars.client.ConfigurableBossBarsClient;
+import org.theomenden.configurablebossbars.client.ConfigurableBossBarsClient;
 import it.unimi.dsi.fastutil.objects.Reference2IntLinkedOpenHashMap;
 import it.unimi.dsi.fastutil.objects.Reference2IntMap;
 import net.minecraft.ChatFormatting;
@@ -20,7 +20,7 @@ import java.util.Iterator;
 public abstract class BossHealthOverlayMixin {
 
     @Unique
-    private static final Reference2IntMap<LerpingBossEvent> bossBars = new Reference2IntLinkedOpenHashMap<>();
+    private static final Reference2IntMap<LerpingBossEvent> theOmenDen_ConfigurableBossBars$bossBars = new Reference2IntLinkedOpenHashMap<>();
 
     @Inject(
             method = "render",
@@ -53,7 +53,7 @@ public abstract class BossHealthOverlayMixin {
                     var name = bar.getName().getString();
                     if(chosenLerpingMap.containsKey(name)) {
                         var bossMapping = chosenLerpingMap.get(name);
-                        bossBars.computeInt(bossMapping, (bossMap, integer) -> integer == null ? 2 : integer + 1);
+                        theOmenDen_ConfigurableBossBars$bossBars.computeInt(bossMapping, (bossMap, integer) -> integer == null ? 2 : integer + 1);
                     } else {
                         chosenLerpingMap.put(name, bar);
                     }
@@ -68,13 +68,13 @@ public abstract class BossHealthOverlayMixin {
             target="Lnet/minecraft/client/gui/components/LerpingBossEvent;getName()Lnet/minecraft/network/chat/Component;")
     )
     private Component onFormatBossTextString(LerpingBossEvent lerpingBossEvent) {
-        var count = bossBars.getOrDefault(lerpingBossEvent, 1);
+        var count = theOmenDen_ConfigurableBossBars$bossBars.getOrDefault(lerpingBossEvent, 1);
 
         if(count == 1) {
             return lerpingBossEvent.getName();
         }
 
-        bossBars.removeInt(lerpingBossEvent);
+        theOmenDen_ConfigurableBossBars$bossBars.removeInt(lerpingBossEvent);
         var name = lerpingBossEvent.getName().copy();
         var bossCount = Component.literal(String.format(" x%d", count)).copy();
 
@@ -91,7 +91,7 @@ public abstract class BossHealthOverlayMixin {
          at = @At("TAIL")
  )
     private void onReset(CallbackInfo ci) {
-        bossBars.clear();
+        theOmenDen_ConfigurableBossBars$bossBars.clear();
  }
 
 }

@@ -1,9 +1,45 @@
 pluginManagement {
     repositories {
         maven {
-            name = 'Fabric'
-            url = 'https://maven.fabricmc.net/'
+            name = "Architectury"
+            url = "https://maven.architectury.dev/"
+        }
+
+        maven {
+            name = "Fabric"
+            url = "https://maven.fabricmc.net/"
+        }
+
+        maven {
+            name = "Forge"
+            url = "https://files.minecraftforge.net/maven/"
+        }
+        maven {
+            name ="NeoForge"
+            url = "https://maven.neforged.net/releases"
+        }
+        maven {
+            name = "Jamalam's Maven"
+            url = "https://maven.jamalam.tech/releases"
+
+            content {
+                includeGroup "io.github.jamalam360"
+            }
         }
         gradlePluginPortal()
     }
 }
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        create("libs") {
+            from(files("libs.versions.toml"))
+        }
+    }
+}
+
+rootProject.name = "configurablebossbars"
+
+include("common")
+include("fabric")
+include("neoforge")

@@ -1,6 +1,6 @@
-package com.theomenden.configurablebossbars.mixins;
+package org.theomenden.configurablebossbars.mixins;
 
-import com.theomenden.configurablebossbars.client.ConfigurableBossBarsClient;
+import org.theomenden.configurablebossbars.client.ConfigurableBossBarsClient;
 import net.minecraft.world.BossEvent;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

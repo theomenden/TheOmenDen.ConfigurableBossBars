@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "configurablebossbars",
+  "version": "${version}",
+  "name": "Configurable Boss Bars",
+  "description": "A simple fabric mod to allow for configurations of boss bars",
+  "authors": [
+    "Andy Beers (Alu)"
+  ],
+  "contact": {
+    "homepage": "https://theomenden.app"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "org.theomenden.configurablebossbars.fabric.ConfigurableBossBarsFabric"
+    ]
+  },
+  "mixins": [
+    "configurablebossbars.mixins.json"
+  ],
+  "custom": {
+    "mc-publish":{
+      "modrinth": "iB0MlSms",
+      "curseforge": 915450
+    },
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/GWshtCqEx4"
+      },
+      "update_checker": true
+    },
+  },
+  "depends": {
+    "minecraft": ">=${minecraft_version}",
+    "java": ">=21",
+    "architectury": ">=${architectury_version}",
+    "fabric": ">=${fabric_api_version}",
+    "jamlib": ">=${jamlib_version}"
+  }
+}

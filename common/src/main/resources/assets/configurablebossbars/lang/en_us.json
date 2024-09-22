@@ -1,0 +1,15 @@
+{
+  "config.configurablebossbars.category.title": "Configurable Boss Bars",
+  "config.configurablebossbars.shouldDisableBars": "Disable Boss Bars",
+  "config.configurablebossbars.bossBarColor": "Change Boss Bar color",
+  "config.configurablebossbars.bossTextColor": "Change Boss Text color",
+  "config.configurablebossbars.shouldDisableBars.tooltip": "Disables ALL Boss Bars",
+  "config.configurablebossbars.bossBarColor.tooltip": "Changes the default boss bar color",
+  "config.configurablebossbars.bossTextColor.tooltip": "Changes the default boss text color",
+  "config.configurablebossbars.title": "Configurable Boss Bars",
+  "config.configurablebossbars.discord": "Configurable Boss Bars",
+  "config.configurablebossbars.github": "Configurable Boss Bars",
+  "config.configurablebossbars.modrinth": "Configurable Boss Bars",
+  "key.cbb.launcher": "Bind Bar Toggle",
+  "category.cbb": "Configurable Boss Bars"
+}
