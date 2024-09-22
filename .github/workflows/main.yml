@@ -1,3 +1,4 @@
+name: main.yml
 on:
   workflow_dispatch:
     inputs:
@@ -24,25 +25,21 @@ env:
   JAVA_VERSION: 21
   VERSION_TITLE: "${{inputs.mc_version}}+${{inputs.mod_version}}-${{inputs.version_type}}"
 
-permissions:
-  contents: write
-
 jobs:
   gradle:
-    strategy:
-      matrix:
-        os: [ ubuntu-latest ]
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - name: Checkout Code
       - uses: actions/checkout@v4
+
       - name: Setup Java
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 21
+
       - name: Cache
         uses: actions/cache@v4.0.2
         with:
@@ -52,25 +49,32 @@ jobs:
             ~/.gradle/wrapper
           key: gradle-${{ hashFiles('**/gradle-wrapper.properties') }}-${{ hashFiles('./gradle.properties') }}-${{ hashFiles('./libs.versions.toml') }}
           restore-keys: gradle
+
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
+
       - name: Validate Gradle Wrapper
         uses: gradle/actions/wrapper-validation@v4
+
       - name: Make gradlew executable
         run: chmod +x ./gradlew
+
       - name: Build
         run: ./gradlew clean neoforge:build fabric:build
+
       - name: Capture Fabric Build Artifacts
         uses: actions/upload-artifact@v4.4.0
         with:
           name: Fabric Artifacts
           path: fabric/build/libs/
+
       - name: Capture NeoForge Build Artifacts
         uses: actions/upload-artifact@v4.4.0
         with:
           name: NeoForge Artifacts
           path: neoforge/build/libs/
-      - name: 'MC Publish NeoForge Assets'
+
+      - name: MC Publish NeoForge Assets
         uses: Kir-Antipov/mc-publish@v3.3.0
         with:
           name: "NeoForge ${{ENV.VERSION_TITLE}}"
@@ -87,7 +91,8 @@ jobs:
           version: "neoforge-${{inputs.mod_version}}"
           game-versions: |
             >=1.21.1
-      - name: 'MC Publish Fabric Assets'
+
+      - name: MC Publish Fabric Assets
         uses: Kir-Antipov/mc-publish@v3.3.0
         with:
           name: "Fabric ${{ENV.VERSION_TITLE}}"
@@ -104,7 +109,8 @@ jobs:
           version: "fabric-${{inputs.mod_version}}"
           game-versions: |
             >=1.21.1
-      - name: 'MC Publish Github Release'
+
+      - name: MC Publish Github Release
         uses: Kir-Antipov/mc-publish@v3.3.0
         with:
           name: "Complete ${{ENV.VERSION_TITLE}}"
