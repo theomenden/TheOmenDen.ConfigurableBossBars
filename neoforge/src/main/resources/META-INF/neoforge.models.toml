@@ -6,7 +6,7 @@ license = "MIT"
 [[mods]]
 modId = "configurablebossbars"
 version = "${file.jarVersion}"
-displayName = "Wandering Cocoa"
+displayName = "Configurable Boss Bars"
 authors = "Alu"
 description = '''
 A simple fabric mod to allow for configurations of boss bars
@@ -18,32 +18,28 @@ modId = "neoforge"
 type = "required"
 versionRange = "[21,)"
 ordering = "NONE"
-side = "BOTH"
+side = "CLIENT"
 
 [[dependencies.configurablebossbars]]
 modId = "minecraft"
 type = "required"
 versionRange = "[${minecraft_version},)"
 ordering = "NONE"
-side = "BOTH"
+side = "CLIENT"
 
 [[dependencies.configurablebossbars]]
 modId = "architectury"
 type = "required"
 versionRange = "[${architectury_version},)"
 ordering = "AFTER"
-side = "BOTH"
+side = "CLIENT"
 
 [[dependencies.configurablebossbars]]
 modId = "jamlib"
 type = "required"
 versionRange = "[${jamlib_version},)"
 ordering = "AFTER"
-side = "BOTH"
+side = "CLIENT"
 
 [[mixins]]
 config = "configurablebossbars.mixins.json"
-
-[[mc-publish]]
-modrinth="iB0MlSms"
-curseforge=915450
