@@ -2,7 +2,7 @@
   "required": true,
   "minVersion": "0.8",
   "package": "org.theomenden.configurablebossbars.mixins",
-  "compatibilityLevel": "JAVA_17",
+  "compatibilityLevel": "JAVA_21",
   "mixins": [
     "LerpingBossEventMixin"
   ],
