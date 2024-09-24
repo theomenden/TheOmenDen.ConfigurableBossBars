@@ -11,12 +11,8 @@ pluginManagement {
         }
 
         maven {
-            name = "Forge"
-            url = "https://files.minecraftforge.net/maven/"
-        }
-        maven {
             name ="NeoForge"
-            url = "https://maven.neforged.net/releases"
+            url = "https://maven.neoforged.net/releases"
         }
         maven {
             name = "Jamalam's Maven"

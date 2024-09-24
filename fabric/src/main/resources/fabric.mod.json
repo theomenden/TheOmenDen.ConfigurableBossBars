@@ -3,12 +3,14 @@
   "id": "configurablebossbars",
   "version": "${version}",
   "name": "Configurable Boss Bars",
-  "description": "A simple fabric mod to allow for configurations of boss bars",
+  "description": "A simple fabric mod to allow for configurations of boss bars.",
   "authors": [
     "Andy Beers (Alu)"
   ],
   "contact": {
-    "homepage": "https://theomenden.app"
+    "homepage": "https://theomenden.app",
+    "sources": "https://github.com/theomenden/TheOmenDen.ConfigurableBossBars",
+    "issues": "https://github.com/theomenden/TheOmenDen.ConfigurableBossBars/issues"
   },
   "license": "MIT",
   "icon": "icon.png",
@@ -21,8 +23,14 @@
   "mixins": [
     "configurablebossbars.mixins.json"
   ],
+  "depends": {
+    "fabric": ">=${fabric_api_version}",
+    "minecraft": ">=${minecraft_version}",
+    "architectury": ">=${architectury_version}",
+    "jamlib": ">=${jamlib_version}"
+  },
   "custom": {
-    "mc-publish":{
+    "mc-publish": {
       "modrinth": "iB0MlSms",
       "curseforge": 915450
     },
@@ -31,13 +39,6 @@
         "modmenu.discord": "https://discord.gg/GWshtCqEx4"
       },
       "update_checker": true
-    },
-  },
-  "depends": {
-    "minecraft": ">=${minecraft_version}",
-    "java": ">=21",
-    "architectury": ">=${architectury_version}",
-    "fabric": ">=${fabric_api_version}",
-    "jamlib": ">=${jamlib_version}"
+    }
   }
 }

@@ -8,10 +8,6 @@ architectury {
     neoForge()
 }
 
-loom {
-    accessWidenerPath = project(":common").loom.accessWidenerPath
-}
-
 base {
     archivesName = "configurablebossbars-neoforge"
 }
@@ -27,7 +23,7 @@ configurations {
 repositories {
     maven {
         name = 'NeoForged'
-        url = 'https://maven.neoforged.net/releases'
+        url = 'https://maven.neoforged.net'
     }
     maven { url "https://www.cursemaven.com"}
 }
