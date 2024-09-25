@@ -118,4 +118,30 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           files: |
             fabric/build/libs/!(*-@(dev|sources|all|javadoc|shadow)).jar
-            neoforge/build/libs/!(*-@(dev|sources|all|javadoc)).jar
+            neoforge/build/libs/!(*-@(dev|sources|all|javadoc|shadow)).jar
+            fabric/build/libs/*-@(dev|sources|javadoc).jar
+            neoforge/build/libs/*-@(dev|sources|javadoc).jar
+    
+  close_issues:
+    runs-on: ubuntu-latest
+    needs: gradle
+    permissions:
+      contents: write
+      issues: write
+      deployments: write
+    steps:
+      - name: Close Stale Issues
+        uses: actions/stale@v9.0.0
+        with:
+    # Token for the repository. Can be passed in using `{{ secrets.GITHUB_TOKEN }}`.
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+    # The message to post on the issue when closing it. If none provided, will not comment when closing an issue.
+          close-issue-message: "Closed by ${{ github.repository_owner }} via ${{ github.workflow }} with id: ${{ github.run_id }}"
+    # The message to post on the pull request when closing it. If none provided, will not comment when closing a pull requests.
+          close-pr-message: "Closed by ${{ github.repository_owner }} via ${{ github.workflow }} with id: ${{ github.run_id }}"
+    # The reason to use when closing an issue.
+          close-issue-reason: "Closed as a result of ${{ github.workflow }} with id: ${{ github.run_id }}"
+          exempt-issue-labels: "renovate"
+          
+    
+          
