@@ -1,0 +1,15 @@
+{
+  "config.configurablebossbars.category.title": "可配置的首领条",
+  "config.configurablebossbars.shouldDisableBars": "禁用首领条",
+  "config.configurablebossbars.bossBarColor": "更改首领条颜色",
+  "config.configurablebossbars.bossTextColor": "更改首领文本颜色",
+  "config.configurablebossbars.shouldDisableBars.tooltip": "禁用所有首领条",
+  "config.configurablebossbars.bossBarColor.tooltip": "更改默认的首领条颜色",
+  "config.configurablebossbars.bossTextColor.tooltip": "更改默认的首领文本颜色",
+  "config.configurablebossbars.title": "可配置的首领条",
+  "config.configurablebossbars.discord": "可配置的首领条",
+  "config.configurablebossbars.github": "可配置的首领条",
+  "config.configurablebossbars.modrinth": "可配置的首领条",
+  "key.cbb.launcher": "绑定条切换",
+  "category.cbb": "可配置的首领条"
+}

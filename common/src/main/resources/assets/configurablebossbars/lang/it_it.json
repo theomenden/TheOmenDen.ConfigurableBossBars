@@ -1,0 +1,15 @@
+{
+  "config.configurablebossbars.category.title": "Barre del Boss Configurabili",
+  "config.configurablebossbars.shouldDisableBars": "Disabilita Barre del Boss",
+  "config.configurablebossbars.bossBarColor": "Cambia colore della Barra del Boss",
+  "config.configurablebossbars.bossTextColor": "Cambia colore del Testo del Boss",
+  "config.configurablebossbars.shouldDisableBars.tooltip": "Disabilita TUTTE le Barre del Boss",
+  "config.configurablebossbars.bossBarColor.tooltip": "Cambia il colore predefinito della barra del boss",
+  "config.configurablebossbars.bossTextColor.tooltip": "Cambia il colore predefinito del testo del boss",
+  "config.configurablebossbars.title": "Barre del Boss Configurabili",
+  "config.configurablebossbars.discord": "Barre del Boss Configurabili",
+  "config.configurablebossbars.github": "Barre del Boss Configurabili",
+  "config.configurablebossbars.modrinth": "Barre del Boss Configurabili",
+  "key.cbb.launcher": "Assegna Interruttore della Barra",
+  "category.cbb": "Barre del Boss Configurabili"
+}

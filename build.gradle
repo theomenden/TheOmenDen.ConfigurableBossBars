@@ -96,7 +96,7 @@ subprojects {
                     'Implementation-Version': project.jar.archiveVersion,
                     'Built-On-Java': "${System.getProperty('java.vm.version')} (${System.getProperty('java.vm.vendor')})",
                     'Built-On-Minecraft': minecraft_version,
-                    'JamLib-File-Name' : "configurablebossbars-${project.base.archivesName.get()}-${rootProject.version}.jar",
+                    'JamLib-File-Name' : "${project.base.archivesName.get()}-${rootProject.version}.jar",
             ])
         }
     }

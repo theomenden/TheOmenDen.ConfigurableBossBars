@@ -1,0 +1,15 @@
+{
+  "config.configurablebossbars.category.title": "Barras de Chefes Configuráveis",
+  "config.configurablebossbars.shouldDisableBars": "Desativar Barras de Chefes",
+  "config.configurablebossbars.bossBarColor": "Alterar cor da Barra de Chefe",
+  "config.configurablebossbars.bossTextColor": "Alterar cor do Texto de Chefe",
+  "config.configurablebossbars.shouldDisableBars.tooltip": "Desativa TODAS as Barras de Chefes",
+  "config.configurablebossbars.bossBarColor.tooltip": "Altera a cor padrão da barra de chefe",
+  "config.configurablebossbars.bossTextColor.tooltip": "Altera a cor padrão do texto de chefe",
+  "config.configurablebossbars.title": "Barras de Chefes Configuráveis",
+  "config.configurablebossbars.discord": "Barras de Chefes Configuráveis",
+  "config.configurablebossbars.github": "Barras de Chefes Configuráveis",
+  "config.configurablebossbars.modrinth": "Barras de Chefes Configuráveis",
+  "key.cbb.launcher": "Atribuir Alternar Barra",
+  "category.cbb": "Barras de Chefes Configuráveis"
+}

@@ -1,0 +1,15 @@
+{
+  "config.configurablebossbars.category.title": "Konfigurierbare Bossleisten",
+  "config.configurablebossbars.shouldDisableBars": "Bossleisten deaktivieren",
+  "config.configurablebossbars.bossBarColor": "Bossleistenfarbe ändern",
+  "config.configurablebossbars.bossTextColor": "Boss-Textfarbe ändern",
+  "config.configurablebossbars.shouldDisableBars.tooltip": "Deaktiviert ALLE Bossleisten",
+  "config.configurablebossbars.bossBarColor.tooltip": "Ändert die Standardfarbe der Bossleiste",
+  "config.configurablebossbars.bossTextColor.tooltip": "Ändert die Standardfarbe des Boss-Texts",
+  "config.configurablebossbars.title": "Konfigurierbare Bossleisten",
+  "config.configurablebossbars.discord": "Konfigurierbare Bossleisten",
+  "config.configurablebossbars.github": "Konfigurierbare Bossleisten",
+  "config.configurablebossbars.modrinth": "Konfigurierbare Bossleisten",
+  "key.cbb.launcher": "Bar-Umschaltung binden",
+  "category.cbb": "Konfigurierbare Bossleisten"
+}

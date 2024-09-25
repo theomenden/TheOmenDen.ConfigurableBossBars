@@ -1,0 +1,15 @@
+{
+  "config.configurablebossbars.category.title": "Настраиваемые Боссы",
+  "config.configurablebossbars.shouldDisableBars": "Отключить Боссы",
+  "config.configurablebossbars.bossBarColor": "Изменить цвет Босса",
+  "config.configurablebossbars.bossTextColor": "Изменить цвет текста Босса",
+  "config.configurablebossbars.shouldDisableBars.tooltip": "Отключает ВСЕ Боссы",
+  "config.configurablebossbars.bossBarColor.tooltip": "Изменяет цвет полосы босса по умолчанию",
+  "config.configurablebossbars.bossTextColor.tooltip": "Изменяет цвет текста босса по умолчанию",
+  "config.configurablebossbars.title": "Настраиваемые Боссы",
+  "config.configurablebossbars.discord": "Настраиваемые Боссы",
+  "config.configurablebossbars.github": "Настраиваемые Боссы",
+  "config.configurablebossbars.modrinth": "Настраиваемые Боссы",
+  "key.cbb.launcher": "Назначить Переключение Босса",
+  "category.cbb": "Настраиваемые Боссы"
+}

@@ -1,0 +1,15 @@
+{
+  "config.configurablebossbars.category.title": "カスタマイズ可能なボスバー",
+  "config.configurablebossbars.shouldDisableBars": "ボスバーを無効化",
+  "config.configurablebossbars.bossBarColor": "ボスバーの色を変更",
+  "config.configurablebossbars.bossTextColor": "ボステキストの色を変更",
+  "config.configurablebossbars.shouldDisableBars.tooltip": "すべてのボスバーを無効化します",
+  "config.configurablebossbars.bossBarColor.tooltip": "デフォルトのボスバーの色を変更します",
+  "config.configurablebossbars.bossTextColor.tooltip": "デフォルトのボステキストの色を変更します",
+  "config.configurablebossbars.title": "カスタマイズ可能なボスバー",
+  "config.configurablebossbars.discord": "カスタマイズ可能なボスバー",
+  "config.configurablebossbars.github": "カスタマイズ可能なボスバー",
+  "config.configurablebossbars.modrinth": "カスタマイズ可能なボスバー",
+  "key.cbb.launcher": "バーの切り替えをバインド",
+  "category.cbb": "カスタマイズ可能なボスバー"
+}

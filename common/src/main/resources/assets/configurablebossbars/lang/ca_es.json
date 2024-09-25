@@ -1,0 +1,15 @@
+{
+  "config.configurablebossbars.category.title": "Barres de Cap Configurables",
+  "config.configurablebossbars.shouldDisableBars": "Desactivar Barres de Cap",
+  "config.configurablebossbars.bossBarColor": "Canviar el color de la Barra de Cap",
+  "config.configurablebossbars.bossTextColor": "Canviar el color del Text de Cap",
+  "config.configurablebossbars.shouldDisableBars.tooltip": "Desactiva TOTES les Barres de Cap",
+  "config.configurablebossbars.bossBarColor.tooltip": "Canvia el color predeterminat de la barra de cap",
+  "config.configurablebossbars.bossTextColor.tooltip": "Canvia el color predeterminat del text de cap",
+  "config.configurablebossbars.title": "Barres de Cap Configurables",
+  "config.configurablebossbars.discord": "Barres de Cap Configurables",
+  "config.configurablebossbars.github": "Barres de Cap Configurables",
+  "config.configurablebossbars.modrinth": "Barres de Cap Configurables",
+  "key.cbb.launcher": "Assignar Interrupció de la Barra",
+  "category.cbb": "Barres de Cap Configurables"
+}

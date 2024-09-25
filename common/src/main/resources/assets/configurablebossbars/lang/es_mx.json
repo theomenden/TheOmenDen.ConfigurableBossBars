@@ -1,0 +1,15 @@
+{
+  "config.configurablebossbars.category.title": "Barras de Jefe Configurables",
+  "config.configurablebossbars.shouldDisableBars": "Deshabilitar Barras de Jefe",
+  "config.configurablebossbars.bossBarColor": "Cambiar el color de la Barra de Jefe",
+  "config.configurablebossbars.bossTextColor": "Cambiar el color del Texto de Jefe",
+  "config.configurablebossbars.shouldDisableBars.tooltip": "Deshabilita TODAS las Barras de Jefe",
+  "config.configurablebossbars.bossBarColor.tooltip": "Cambia el color predeterminado de la barra de jefe",
+  "config.configurablebossbars.bossTextColor.tooltip": "Cambia el color predeterminado del texto de jefe",
+  "config.configurablebossbars.title": "Barras de Jefe Configurables",
+  "config.configurablebossbars.discord": "Barras de Jefe Configurables",
+  "config.configurablebossbars.github": "Barras de Jefe Configurables",
+  "config.configurablebossbars.modrinth": "Barras de Jefe Configurables",
+  "key.cbb.launcher": "Asignar Interrupción de la Barra",
+  "category.cbb": "Barras de Jefe Configurables"
+}
