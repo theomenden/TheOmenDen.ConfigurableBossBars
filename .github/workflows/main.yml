@@ -136,11 +136,11 @@ jobs:
     # Token for the repository. Can be passed in using `{{ secrets.GITHUB_TOKEN }}`.
           repo-token: ${{ secrets.GITHUB_TOKEN }}
     # The message to post on the issue when closing it. If none provided, will not comment when closing an issue.
-          close-issue-message: "Closed by ${{ github.repository_owner }} via ${{ github.workflow }} with id: ${{ github.run_id }}"
+          close-issue-message: completed #"Closed by ${{ github.repository_owner }} via ${{ github.workflow }} with id: ${{ github.run_id }}"
     # The message to post on the pull request when closing it. If none provided, will not comment when closing a pull requests.
-          close-pr-message: "Closed by ${{ github.repository_owner }} via ${{ github.workflow }} with id: ${{ github.run_id }}"
+          close-pr-message: completed #"Closed by ${{ github.repository_owner }} via ${{ github.workflow }} with id: ${{ github.run_id }}"
     # The reason to use when closing an issue.
-          close-issue-reason: "Closed as a result of ${{ github.workflow }} with id: ${{ github.run_id }}"
+          close-issue-reason: completed #"Closed as a result of ${{ github.workflow }} with id: ${{ github.run_id }}"
           exempt-issue-labels: "renovate"
           
     
