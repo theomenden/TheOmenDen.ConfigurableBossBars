@@ -13,7 +13,7 @@ fabric-loader = "0.16.3"
 fabric-api = "0.103.0+1.21.1"
 
 # https://modrinth.com/mod/modmenu/versions
-modmenu = "11.0.2"
+modmenu = "11.0.3"
 
 # https://github.com/falkreon/Jankson/releases/latest
 jankson = "1.2.3"
