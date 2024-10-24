@@ -19,7 +19,7 @@ modmenu = "11.0.3"
 jankson = "1.2.3"
 
 # https://github.com/JamCoreModding/jamlib
-jamlib="1.2.1+1.21"
+jamlib="1.2.2+1.21.3"
 
 [libraries]
 architectury-common = { module = "dev.architectury:architectury", version.ref = "architectury" }
