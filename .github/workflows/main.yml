@@ -75,7 +75,7 @@ jobs:
           path: neoforge/build/libs/
 
       - name: MC Publish NeoForge Assets
-        uses: Kir-Antipov/mc-publish@v3.3.0
+        uses: Kir-Antipov/mc-publish@v3.3.1
         with:
           name: "NeoForge ${{ENV.VERSION_TITLE}}"
           modrinth-id: iB0MlSms
@@ -93,7 +93,7 @@ jobs:
             >=1.21.1
 
       - name: MC Publish Fabric Assets
-        uses: Kir-Antipov/mc-publish@v3.3.0
+        uses: Kir-Antipov/mc-publish@v3.3.1
         with:
           name: "Fabric ${{ENV.VERSION_TITLE}}"
           modrinth-id: iB0MlSms
@@ -111,7 +111,7 @@ jobs:
             >=1.21.1
 
       - name: MC Publish Github Release
-        uses: Kir-Antipov/mc-publish@v3.3.0
+        uses: Kir-Antipov/mc-publish@v3.3.1
         with:
           name: "Complete ${{ENV.VERSION_TITLE}}"
           github-generate-changelog: true
