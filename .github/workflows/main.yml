@@ -131,7 +131,7 @@ jobs:
       deployments: write
     steps:
       - name: Close Stale Issues
-        uses: actions/stale@v9.1.0
+        uses: actions/stale@v10.4.0
         with:
     # Token for the repository. Can be passed in using `{{ secrets.GITHUB_TOKEN }}`.
           repo-token: ${{ secrets.GITHUB_TOKEN }}
